@@ -1,6 +1,4 @@
 const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-dotenv.config();
 
 const connectDB = async () => {
 
@@ -12,7 +10,8 @@ const connectDB = async () => {
             
         });
 
-        console.log(`mongoDB Connected:${conn}`);
+        console.log(`MongoDB Connected: ${conn.connection.host}`)
+
     } catch (error) {
         console.log(`Error:  ${error.message}`);
         process.exit();

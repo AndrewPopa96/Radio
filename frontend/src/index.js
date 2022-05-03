@@ -1,12 +1,13 @@
-import { render } from "react-dom";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import App from "./App";
-import Profile from './screens/Profile';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./pages/index";
+import reportWebVitals from "./reportWebVitals";
 
-const rootElement = document.getElementById("root");
-render(<BrowserRouter>
-  <Routes>
-    <Route path='/' exact element={<App />} />
-    <Route path='/profile' element={<Profile />} />
-  </Routes>
-</BrowserRouter>, rootElement);
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
+<React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
+
+reportWebVitals();
