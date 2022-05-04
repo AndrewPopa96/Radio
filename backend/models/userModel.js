@@ -20,11 +20,6 @@ const userSchema = mongoose.Schema(
             type: Boolean,
             required: true,
             default: false,
-        },
-        pic: {
-            type: String,
-            required: true,
-            default: ""
         }
     },
     {
