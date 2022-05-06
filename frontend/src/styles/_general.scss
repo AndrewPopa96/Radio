@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  background-color: #17131f;
+  font-family: "Bariol Regular", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "ADRENALINE Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("ADRENALINE Regular"),
+    url("../fonts/AdrenalinesDemoRegular.ttf") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Regular"),
+    url("../fonts/bariol_regular-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Regular Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Regular Italic"),
+    url("../fonts/bariol_regular_italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Thin Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Thin Italic"),
+    url("../fonts/bariol_thin_italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Thin";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Thin"),
+    url("../fonts/bariol_thin-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Light";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Light"),
+    url("../fonts/bariol_light-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Light Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Light Italic"),
+    url("../fonts/bariol_light_italic-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Bold"),
+    url("../fonts/bariol_bold-webfont.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Bariol Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Bariol Bold Italic"),
+    url("../fonts/bariol_bold_italic-webfont.woff") format("woff");
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+h1 {
+  margin-top: 0;
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.4;
+
+  @media screen and (max-width: 767px) {
+    font-size: var(--size-xs);
+  }
+  @media screen and (min-width: 767px) {
+    font-size: var(--size);
+  }
+}

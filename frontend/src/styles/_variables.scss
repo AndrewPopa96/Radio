@@ -1,0 +1,76 @@
+:root {
+  // Colors
+
+  --color-primary: #7a36e5;
+  --color-primary-dark: #6a3db2;
+  --color-secondary: #ff993d;
+  --color-secondary-light: #f9deb0;
+  --color-secondary-medium: #ffc257;
+  --color-yellow-light: #d2af72;
+  --color-white: #f7f6f2;
+  --color-black: #1e1d1b;
+  --color-red: #f93a3a;
+
+  --color-secondary-rgba: 255, 153, 61;
+
+  // Sizes - Major Third - 16px
+
+  --size-7xs: 0.262rem;
+  --size-6xs: 0.328rem;
+  --size-5xs: 0.41rem;
+  --size-4xs: 0.512rem;
+  --size-3xs: 0.64rem;
+  --size-2xs: 0.8rem;
+  --size-xs: 1rem;
+  --size: 1.25rem;
+  --size-xl: 1.563rem;
+  --size-2xl: 1.953rem;
+  --size-3xl: 2.441rem;
+  --size-4xl: 3.052rem;
+  --size-5xl: 3.815rem;
+  --size-6xl: 4.768rem;
+  --size-7xl: 5.96rem;
+  --size-8xl: 7.451rem;
+  --size-9xl: 9.313rem;
+  --size-10xl: 11.642rem;
+  --size-11xl: 14.552rem;
+  --size-12xl: 18.19rem;
+  --size-13xl: 22.737rem;
+  --size-14xl: 35.527rem;
+  --size-15xl: 44.409rem;
+  --size-16xl: 55.511rem;
+  --size-17xl: 69.389rem;
+  --size-18xl: 86.736rem;
+
+  // Shadows
+
+  --glow: 0 0 var(--size-3xs) var(--color-secondary-medium);
+  --glow-xl: 0 0 var(--size-3xl) var(--color-secondary);
+  --glow-xl-light: 0 0 var(--size-5xl) rgba(255, 153, 61, 0.6);
+
+  // Borders
+
+  --border-solid-xl: 2px solid var(--color-secondary);
+  --border-solid: 1px solid var(--color-secondary);
+  --border-solid-primary: 1px solid var(--color-primary);
+  --border-solid-primary-xl: 2px solid var(--color-primary);
+
+  // Transitions
+
+  --transition: ease-in-out 0.1s;
+
+  // Border Radius
+
+  --border-radius-4xs: var(--size-4xs);
+  --border-radius-xl: var(--size);
+  --border-radius: var(--size-3xl);
+  --border-radius-xl: var(--size-5xl);
+
+  // Gradients
+
+  --gradient-dark: radial-gradient(
+    rgba(93, 65, 41, 0.75),
+    rgba(35, 30, 43, 0.8),
+    rgba(22, 17, 30, 1)
+  );
+}

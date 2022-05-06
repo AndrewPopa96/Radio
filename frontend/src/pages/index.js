@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 
+import Main from "../components/Screen/Main";
+
 const Homepage = () => {
   const [storage, setStorage] = useState("");
   useEffect(() => {
@@ -7,7 +9,7 @@ const Homepage = () => {
   }, []);
 
   return (
-    <div>
+    <Main>
       this is the homepagetest
       <br />
       {storage && (
@@ -20,7 +22,7 @@ const Homepage = () => {
           Logout
         </button>
       )}
-    </div>
+    </Main>
   );
 };
 
