@@ -9,6 +9,7 @@
   --color-yellow-light: #d2af72;
   --color-white: #f7f6f2;
   --color-black: #1e1d1b;
+  --color-ghost: #2e2e2d;
   --color-red: #f93a3a;
 
   --color-secondary-rgba: 255, 153, 61;
@@ -52,6 +53,7 @@
 
   --border-solid-xl: 2px solid var(--color-secondary);
   --border-solid: 1px solid var(--color-secondary);
+  --border-ghost: 1px solid var(--color-ghost);
   --border-solid-primary: 1px solid var(--color-primary);
   --border-solid-primary-xl: 2px solid var(--color-primary);
 
@@ -62,7 +64,7 @@
   // Border Radius
 
   --border-radius-4xs: var(--size-4xs);
-  --border-radius-xl: var(--size);
+  --border-radius-xs: var(--size);
   --border-radius: var(--size-3xl);
   --border-radius-xl: var(--size-5xl);
 

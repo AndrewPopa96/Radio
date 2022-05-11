@@ -1,6 +1,6 @@
 import { Button, Form } from "react-bootstrap";
 import { useState } from "react";
-import Alert from "../../components/Alert";
+import Main from "../../components/Screen/Main";
 import axios from "axios";
 
 const Signup = () => {
@@ -45,58 +45,60 @@ const Signup = () => {
   };
 
   return (
-    <Form onSubmit={submitHandler}>
-      {error && <Alert variant="danger">{error}</Alert>}
+    <Main container={["xs"]}>
+      <Form className="form" onSubmit={submitHandler}>
+        {error && <div variant="danger">{error}</div>}
 
-      {message && message}
+        {message && message}
 
-      {loading && <div>Loading</div>}
+        {loading && <div>Loading</div>}
 
-      <Form.Group controlId="formName">
-        <Form.Label>Name</Form.Label>
-        <Form.Control
-          type="name"
-          value={name}
-          onChange={e => setName(e.target.value)}
-          placeholder="Enter name"
-        />
-      </Form.Group>
+        <Form.Group class="input" controlId="formName">
+          <Form.Label class="label">Name</Form.Label>
+          <Form.Control
+            type="name"
+            value={name}
+            onChange={e => setName(e.target.value)}
+            placeholder="Enter name"
+          />
+        </Form.Group>
 
-      <Form.Group controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control
-          type="email"
-          value={email}
-          onChange={e => setEmail(e.target.value)}
-          placeholder="Enter email"
-        />
-      </Form.Group>
+        <Form.Group class="input" controlId="formBasicEmail">
+          <Form.Label class="label">Email address</Form.Label>
+          <Form.Control
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="Enter email"
+          />
+        </Form.Group>
 
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control
-          type="password"
-          value={password}
-          placeholder="Password"
-          onChange={e => setPassword(e.target.value)}
-        />
-      </Form.Group>
+        <Form.Group class="input" controlId="formBasicPassword">
+          <Form.Label class="label">Password</Form.Label>
+          <Form.Control
+            type="password"
+            value={password}
+            placeholder="Password"
+            onChange={e => setPassword(e.target.value)}
+          />
+        </Form.Group>
 
-      <Form.Group controlId="formConfirmPassword">
-        <Form.Label>Confirm Password</Form.Label>
-        <Form.Control
-          type="password"
-          value={confirm}
-          placeholder="Confirm Password"
-          onChange={e => setConfirm(e.target.value)}
-        />
-      </Form.Group>
+        <Form.Group class="input" controlId="formConfirmPassword">
+          <Form.Label class="label">Confirm Password</Form.Label>
+          <Form.Control
+            type="password"
+            value={confirm}
+            placeholder="Confirm Password"
+            onChange={e => setConfirm(e.target.value)}
+          />
+        </Form.Group>
 
-      <Button variant="primary" type="submit">
-        Submit
-      </Button>
-      <div>Already have account?</div>
-    </Form>
+        <Button className="submit" variant="primary" type="submit">
+          Submit
+        </Button>
+        <div>Already have account?</div>
+      </Form>
+    </Main>
   );
 };
 

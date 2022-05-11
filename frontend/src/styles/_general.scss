@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-size: 21px;
   background-color: #17131f;
   font-family: "Bariol Regular", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
     "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
@@ -86,6 +87,10 @@ code {
 
 h1 {
   margin-top: 0;
+}
+
+a {
+  text-decoration: none;
 }
 
 p {
