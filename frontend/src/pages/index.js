@@ -1,14 +1,21 @@
 import { useEffect, useState } from "react";
-import Plyr from "plyr-react";
 import axios from "axios";
 
 import Card from "../components/elements/Card";
 import Main from "../components/Screen/Main";
 import Grid from "../components/elements/Grid";
+import MediaPlayer from "../components/elements/MediaPlayer";
 
 const Homepage = () => {
   const [storage, setStorage] = useState("");
   const [data, setData] = useState(false);
+  const [playing, setPlaying] = useState(false);
+
+  useEffect(() => {
+    data && data.data && setPlaying(data.data[0]);
+  }, [data.data]);
+
+  console.log(playing);
 
   useEffect(() => {
     setStorage(localStorage.getItem("userInfo"));
@@ -28,28 +35,34 @@ const Homepage = () => {
         config
       );
       setData(chunk);
-      // console.log(chunk);
     };
 
-    // call the function
-    fetchData()
-      // make sure to catch any error
-      .catch(console.error);
+    fetchData().catch(console.error);
   }, []);
 
   return (
     <Main>
-      this is the homepagetest
-      {/* to be replaced with grid */}
-      <Grid>
-        {data &&
-          data.data &&
-          data.data.map(item => (
-            <Card>
-              {item.title}
-              <Plyr source={`https://www.youtube.com/watch?v=`} />
-            </Card>
-          ))}
+      <Grid variant={["2"]}>
+        <div>
+          {data && data.data && (
+            <h2>Now playing: {playing && playing.title}</h2>
+          )}
+          {playing && <MediaPlayer autoplay src={playing && playing.link} />}
+        </div>
+        <div>
+          {data &&
+            data.data &&
+            data.data.map((item, index) => (
+              <Card onClick={() => setPlaying(item)} key={`song-${index}`}>
+                <MediaPlayer
+                  variant={["inline"]}
+                  title={item.title}
+                  playable={false}
+                  src={item.link}
+                />
+              </Card>
+            ))}
+        </div>
       </Grid>
       {storage && (
         <button

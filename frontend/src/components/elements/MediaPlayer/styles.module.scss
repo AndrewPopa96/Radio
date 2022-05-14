@@ -1,0 +1,19 @@
+.media {
+  iframe {
+    display: none;
+  }
+}
+
+.image {
+  width: 100%;
+}
+
+.media--inline {
+  .details {
+    display: flex;
+  }
+
+  .thumbnail {
+    width: 150px;
+  }
+}

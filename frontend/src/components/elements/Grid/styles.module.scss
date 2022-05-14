@@ -1,6 +1,10 @@
 .grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--size);
-    row-gap: var(--size);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: var(--size);
+  row-gap: var(--size);
+}
+
+.grid--2 {
+  grid-template-columns: 1fr 1fr;
 }

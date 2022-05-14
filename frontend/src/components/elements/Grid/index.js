@@ -1,5 +1,13 @@
+/* eslint-disable react/prop-types */
 import styles from "./styles.module.scss";
 
-const Grid = ({ children }) => <div className={styles.grid}>{children}</div>;
+import classNames from "classnames";
+import { withModifiers } from "../../helpers/withModifiers";
+
+const Grid = ({ children, variant }) => (
+  <div className={classNames(withModifiers("grid", variant, styles))}>
+    {children}
+  </div>
+);
 
 export default Grid;
