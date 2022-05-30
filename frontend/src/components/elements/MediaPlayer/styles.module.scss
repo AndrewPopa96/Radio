@@ -1,4 +1,8 @@
 .media {
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+
   iframe {
     display: none;
   }
@@ -8,12 +12,37 @@
   width: 100%;
 }
 
+.thumbnail {
+  display: flex;
+}
+
 .media--inline {
+  border-radius: 0;
   .details {
     display: flex;
   }
 
   .thumbnail {
     width: 150px;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: var(--size-3xl) var(--size-4xl) var(--size-3xs) var(--size-4xl);
+}
+
+.seekbar {
+  input {
+    width: 100%;
+    height: var(--size-3xl);
+    margin: 0;
   }
 }

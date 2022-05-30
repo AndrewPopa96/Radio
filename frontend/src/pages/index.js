@@ -47,7 +47,9 @@ const Homepage = () => {
           {data && data.data && (
             <h2>Now playing: {playing && playing.title}</h2>
           )}
-          {playing && <MediaPlayer autoplay src={playing && playing.link} />}
+          {playing && (
+            <MediaPlayer autoplay={true} src={playing && playing.link} />
+          )}
         </div>
         <div>
           {data &&
