@@ -2,8 +2,9 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 import Card from "../components/elements/Card";
+import Row from "../components/elements/Row";
+import Column from "../components/elements/Column";
 import Main from "../components/Screen/Main";
-import Grid from "../components/elements/Grid";
 import MediaPlayer from "../components/elements/MediaPlayer";
 
 const Homepage = () => {
@@ -14,8 +15,6 @@ const Homepage = () => {
   useEffect(() => {
     data && data.data && setPlaying(data.data[0]);
   }, [data.data]);
-
-  console.log(playing);
 
   useEffect(() => {
     setStorage(localStorage.getItem("userInfo"));
@@ -42,16 +41,16 @@ const Homepage = () => {
 
   return (
     <Main>
-      <Grid variant={["2"]}>
-        <div>
+      <Row>
+        <Column>
           {data && data.data && (
             <h2>Now playing: {playing && playing.title}</h2>
           )}
           {playing && (
             <MediaPlayer autoplay={true} src={playing && playing.link} />
           )}
-        </div>
-        <div>
+        </Column>
+        <Column>
           {data &&
             data.data &&
             data.data.map((item, index) => (
@@ -64,8 +63,8 @@ const Homepage = () => {
                 />
               </Card>
             ))}
-        </div>
-      </Grid>
+        </Column>
+      </Row>
       {storage && (
         <button
           onClick={() => {
