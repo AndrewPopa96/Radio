@@ -5,3 +5,12 @@
   background-color: var(--color-secondary-light);
   border-radius: var(--border-radius);
 }
+
+.card--image {
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--glow-primary);
+  border: 0;
+
+  border-radius: var(--border-radius-xs);
+}

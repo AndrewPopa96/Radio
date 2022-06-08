@@ -1,0 +1,33 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.content {
+  color: var(--color-white);
+  position: relative;
+  letter-spacing: 2px;
+  z-index: 3;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: bold;
+  font-size: var(--size-4xl);
+}
+
+.image {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  transform: translate(-50%, -50%);
+
+  z-index: 1;
+}

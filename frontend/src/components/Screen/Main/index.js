@@ -6,7 +6,7 @@ import Header from "../../elements/Header";
 
 import styles from "./styles.module.scss";
 
-const Main = ({ children, container }) => (
+const Main = ({ children, container, title }) => (
   <main className={styles.main}>
     {/* Header */}
     <Header />
@@ -15,7 +15,10 @@ const Main = ({ children, container }) => (
 
     {/* Footer */}
     <Container variant={container}>
-      <Card>{children}</Card>
+      <Card>
+        <h1 className={styles.title}>{title}</h1>
+        <div>{children}</div>
+      </Card>
     </Container>
   </main>
 );

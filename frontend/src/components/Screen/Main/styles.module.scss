@@ -1,3 +1,11 @@
 .main {
   min-height: 100vh;
 }
+
+.title {
+  font-size: var(--size-5xl);
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
